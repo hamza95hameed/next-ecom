@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
 
-const ProductCard = () => {
+const ProductCard = ({product}) => {
     return (
         <div className="axil-product product-style-one">
             <div className="thumbnail">
                 <Link href="single-product.html">
-                    <img data-sal="zoom-out" data-sal-delay="200" data-sal-duration="800" loading="lazy" className="main-img" src="../images/product/electric/product-01.png" alt="Product Images" />
-                    <img className="hover-img" src="../images/product/electric/product-08.png" alt="Product Images" />
+                    <img data-sal="zoom-out" data-sal-delay="200" data-sal-duration="800" loading="lazy" className="main-img" src={`../images/product/electric/product-0${product}.png`} alt="Product Images" />
+                    <img className="hover-img" src={`../images/product/electric/product-0${product}.png`} alt="Product Images" />
                 </Link>
                 <div className="label-block label-right">
                     <div className="product-badget">20% Off</div>
